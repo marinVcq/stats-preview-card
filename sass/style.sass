@@ -1,0 +1,80 @@
+@import base/_base.sass
+@import base/_mixins.sass
+
+.main-container
+	@include flexbox(column, center, stretch)
+	@include width-height(100%,100%)
+	background-color: $dark-blue-desatured
+	color: $white
+	max-width: 33.5rem
+	border-radius: 1rem
+
+.accent
+	color: $soft-violet
+
+.image-container
+	height: 25rem
+	background: linear-gradient(0deg, $intense-violet,$intense-violet), url('../assets/images/image-header-mobile.jpg')
+	background-position: center
+	background-size: cover
+	border-radius: 1rem 1rem 0 0
+
+.text-container
+	text-align: center
+	padding: 2.4rem
+
+	#title
+		font-weight: bold
+		font-size: 3rem
+		color: $white
+		margin-bottom: 2.8rem
+
+	#description
+		color: $transparent-white-paragraph
+		line-height: 2.7rem
+		text-indent: 3rem
+		
+
+.block-container
+	margin-top: 3rem
+	@include flexbox(column,undefined,undefined)
+
+	.block
+		margin-bottom: 2rem
+		font-family: "Lexend Deca"
+
+		.block-stat
+			font-size: 2.4rem
+			color: $white
+			font-weight: semi-bold
+
+		.block-name
+			color: $transparent-white-paragraph
+			text-transform: uppercase
+			font-size: 1.25rem
+			margin-top: 0.4rem
+
+@include respond(desktop)
+		.main-container
+			flex-direction: row-reverse
+			max-width: 108rem
+			max-height: 41rem
+
+		.image-container
+			@include width-height(54rem, 41rem)
+			border-radius: 0 1rem 1rem 0
+
+		.text-container
+			@include width-height(54rem, 41rem)
+			padding: 7rem 12rem 0 7rem
+			text-align: start
+
+			#title
+				margin-bottom: 2.8rem
+
+			#description
+				text-indent: 0
+
+		.block-container
+			@include flexbox(row, space-between, stretch)
+			margin-top: 6rem

@@ -1,0 +1,50 @@
+@import ../base/_mixins.sass
+
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap')
+
+/* Color palette */
+
+$dark-blue: hsl(233, 47%, 7%) 
+$dark-blue-desatured: hsl(244, 38%, 16%)
+$soft-violet: hsl(277, 64%, 61%)
+$intense-violet: rgba(120,38,171,0.4)
+$white: hsl(0, 0%, 100%)
+$transparent-white-paragraph: hsla(0, 0%, 100%, 0.75)
+$transparent-white-stats: hsla(0, 0%, 100%, 0.6)
+
+/* General */
+
+*
+	box-sizing: border-box
+	position: relative
+	cursor: default
+	margin: 0
+
+html
+	@include width-height(100vw, 100vh)
+	position: relative
+	margin: 0
+	padding: 0
+	font-size: 62.5%
+
+body
+	@include flexbox(row, center, center)
+	margin: 0
+	padding: 0
+	width: 100%
+	font-family: "Inter"
+	font-size: 1.5rem
+	scroll-behavior: smooth
+	overflow-x: hidden
+	background-color: $dark-blue
+	padding: 8rem 0 8rem 0
+
+a
+	cursor: pointer
+	text-decoration: none
+
+@include respond(desktop)
+	body
+		height: 100%
+

@@ -1,0 +1,121 @@
+/* Fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* Color palette */
+/* General */
+* {
+  box-sizing: border-box;
+  position: relative;
+  cursor: default;
+  margin: 0; }
+
+html {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%; }
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Inter";
+  font-size: 1.5rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #090b1a;
+  padding: 8rem 0 8rem 0; }
+
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+@media only screen and (min-width: 1440px) {
+  body {
+    height: 100%; } }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1938;
+  color: white;
+  max-width: 33.5rem;
+  border-radius: 1rem; }
+
+.accent {
+  color: #aa5cdb; }
+
+.image-container {
+  height: 25rem;
+  background: linear-gradient(0deg, rgba(120, 38, 171, 0.4), rgba(120, 38, 171, 0.4)), url("../assets/images/image-header-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0; }
+
+.text-container {
+  text-align: center;
+  padding: 2.4rem; }
+  .text-container #title {
+    font-weight: bold;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2.8rem; }
+  .text-container #description {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 2.7rem;
+    text-indent: 3rem; }
+
+.block-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: undefined;
+  align-items: undefined; }
+  .block-container .block {
+    margin-bottom: 2rem;
+    font-family: "Lexend Deca"; }
+    .block-container .block .block-stat {
+      font-size: 2.4rem;
+      color: white;
+      font-weight: semi-bold; }
+    .block-container .block .block-name {
+      color: rgba(255, 255, 255, 0.75);
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      margin-top: 0.4rem; }
+
+@media only screen and (min-width: 1440px) {
+  .main-container {
+    flex-direction: row-reverse;
+    max-width: 108rem;
+    max-height: 41rem; }
+
+  .image-container {
+    width: 54rem;
+    height: 41rem;
+    border-radius: 0 1rem 1rem 0; }
+
+  .text-container {
+    width: 54rem;
+    height: 41rem;
+    padding: 7rem 12rem 0 7rem;
+    text-align: start; }
+    .text-container #title {
+      margin-bottom: 2.8rem; }
+    .text-container #description {
+      text-indent: 0; }
+
+  .block-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 6rem; } }
